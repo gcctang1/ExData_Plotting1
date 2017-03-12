@@ -9,6 +9,7 @@ df2 <- subset(df,Date=="1/2/2007"|Date=="2/2/2007")
 ##Combine the Date and Time and convert to "POSIXlt" and "POSIXt" classes
 df2$Date <- strptime(paste(df2$Date,df2$Time),format ="%d/%m/%Y %H:%M:%S")
 
+##Change the classes from "factor" to "class"
 df2$Global_active_power <- as.numeric(as.character(df2$Global_active_power))
 df2$Sub_metering_1 <- as.numeric(as.character(df2$Sub_metering_1))
 df2$Sub_metering_2 <- as.numeric(as.character(df2$Sub_metering_2))
